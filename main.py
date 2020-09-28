@@ -8,6 +8,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 from fastapi.responses import PlainTextResponse
+import math
 
 app = FastAPI()
 
@@ -73,6 +74,10 @@ async def max(li):
 async def min(li):
     ls = tonumlist(li)
     return np.amin(ls)
+
+@app.get("/pow")
+async def pow(a: int = 0, b: int = 0):
+    return math.pow(a,b)
 
 @app.get("/validation-ctzid")
 async def validation_ctzid(text):
