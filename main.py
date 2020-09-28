@@ -83,7 +83,7 @@ async def pow(a: int = 0, b: int = 0):
 async def muti(a):
     curr = a.split(",")
     for i in range(len(curr)):
-        curr2 = curr[i]*curr[i+1]
+        curr2 = int(curr[i])*int(curr[i+1])
         sum = sum + curr2
     return sum
     
