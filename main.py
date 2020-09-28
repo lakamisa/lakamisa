@@ -86,6 +86,14 @@ async def muti(a):
         curr2 = int(curr[i])*int(curr[i+1])
         sum = sum + curr2
     return sum
+
+@app.get("/muti2")
+async def muti2(li):
+    ls = tonumlist(li)
+    for i in range(len(ls)):
+        curr2 = ls[i]*ls[i+1]
+        sum = sum + curr2
+    return sum
     
 
 @app.get("/validation-ctzid")
