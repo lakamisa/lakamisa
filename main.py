@@ -83,7 +83,16 @@ async def pow(a: int = 0, b: int = 0):
 async def validation_ctzid(text):
     if(len(text) != 13):
         return False
+
+@app.get("/muti")
+async def muti(a):
+    curr = a.split(",")
+    for i in range(len(curr)):
+        curr2 = curr[i]*curr[i+1]
+        sum = sum + curr2
+    return sum
     
+
     sum = 0
     listdata = list(text)
     
