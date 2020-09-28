@@ -93,9 +93,8 @@ async def muti2(li):
 
 @app.get("/ascii")
 async def ascii(li):
-    ls = tonumlist(li)
-    for i in ls :
-        word = "Ox"+ord(chr(ls[i]))+","
+    for i in li :
+        word = hex(ord(i))+","
         sumword = sumword + word
     return sumword
 
