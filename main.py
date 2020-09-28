@@ -84,9 +84,10 @@ async def pow(a: int = 0, b: int = 0):
 @app.get("/muti2")
 async def muti2(li):
     ls = tonumlist(li)
+    sum = 1
     for i in ls :
-        a = ls[i]
-        sum = ls * a
+        a = i
+        sum = sum * a
         
     return sum
 
