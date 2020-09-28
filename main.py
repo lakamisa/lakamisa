@@ -172,21 +172,20 @@ def youtube_search(text):
         # 'DNT': '1',
         # 'Connection': 'keep-alive',
         # 'Upgrade-Insecure-Requests': '1'
-        'authority': 'www.youtube.com',
-        'method': 'GET,path: /',
-        'scheme': 'https',
+        
+        #'method': 'GET,path: /',
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
         'accept-encoding': 'gzip, deflate, br',
         'accept-language': 'en-US,en;q=0.9,th-TH;q=0.8,th;q=0.7',
         'cache-control': 'max-age=0',
 
-        'sec-fetch-dest': 'document',
-        'sec-fetch-mode': 'navigate',
-        'sec-fetch-site': 'none',
-        'sec-fetch-user': '?1',
-'upgrade-insecure-requests': '1',
-'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
-'x-client-data': 'CJK2yQEIprbJAQjEtskBCKmdygEImbXKAQisx8oBCPXHygEI58jKAQjpyMoBCKzJygEItMvKAQiQzsoBCNnXygEYxMDKAQ=='
+        # 'sec-fetch-dest': 'document',
+        # 'sec-fetch-mode': 'navigate',
+        # 'sec-fetch-site': 'none',
+        # 'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+        #'x-client-data': 'CJK2yQEIprbJAQjEtskBCKmdygEImbXKAQisx8oBCPXHygEI58jKAQjpyMoBCKzJygEItMvKAQiQzsoBCNnXygEYxMDKAQ=='
     }
     url = 'https://www.youtube.com/results?search_query=' + str(text)
     res = requests.get(url, headers = headers)
