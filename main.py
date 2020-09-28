@@ -79,22 +79,27 @@ async def min(li):
 async def pow(a: int = 0, b: int = 0):
     return math.pow(a,b)
 
-@app.get("/muti")
-async def muti(a):
-    curr = a.split(",")
-    for i in range(len(curr)):
-        curr2 = int(curr[i])*int(curr[i+1])
-        sum = sum + curr2
-    return sum
+
 
 @app.get("/muti2")
 async def muti2(li):
     ls = tonumlist(li)
-    for i in range(len(ls)):
-        curr2 = ls[i]*ls[i+1]
-        sum = sum + curr2
+    for i in ls :
+        a = ls[i]
+        sum = ls * a
+        
     return sum
-    
+
+
+@app.get("/ascii")
+async def ascii(li):
+    ls = tonumlist(li)
+    for i in ls :
+        word = "Ox"+ord(chr(ls[i]))+","
+        sumword = sumword + word
+    return sumword
+
+
 
 @app.get("/validation-ctzid")
 async def validation_ctzid(text):
