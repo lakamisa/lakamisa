@@ -93,6 +93,7 @@ async def muti2(li):
 
 @app.get("/ascii")
 async def ascii(li):
+    sumword = ""
     for i in li :
         word = hex(ord(i))+","
         sumword = sumword + word
