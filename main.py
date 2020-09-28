@@ -79,11 +79,6 @@ async def min(li):
 async def pow(a: int = 0, b: int = 0):
     return math.pow(a,b)
 
-@app.get("/validation-ctzid")
-async def validation_ctzid(text):
-    if(len(text) != 13):
-        return False
-
 @app.get("/muti")
 async def muti(a):
     curr = a.split(",")
@@ -93,6 +88,11 @@ async def muti(a):
     return sum
     
 
+@app.get("/validation-ctzid")
+async def validation_ctzid(text):
+    if(len(text) != 13):
+        return False
+    
     sum = 0
     listdata = list(text)
     
