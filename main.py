@@ -144,7 +144,7 @@ def google_search(text):
         'Upgrade-Insecure-Requests': '1'
     }
     #url = 'https://www.google.com/search?q=' + str(text) + '&biw=1396&bih=657&dpr=1.38'
-    url = 'https://www.google.com/search?q=site:youtube ' + str(text) 
+    url = 'https://www.google.com/search?q=site:youtube.com ' + str(text) 
     res = requests.get(url, headers = headers)
     soup = BeautifulSoup(res.content, 'html.parser')
     
